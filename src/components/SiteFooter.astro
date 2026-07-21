@@ -1,0 +1,34 @@
+﻿---
+import { footerLinks, navigation } from "../data/navigation";
+import { site } from "../data/site";
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h2>{site.name}</h2>
+      <p>{site.description}</p>
+      <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul>
+        {navigation.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <h3>Legal</h3>
+      <ul>
+        {footerLinks.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {year} {site.name}. All rights reserved.</p>
+  </div>
+</footer>

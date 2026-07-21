@@ -1,0 +1,77 @@
+﻿---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const reviews = await getCollection("reviews");
+  return reviews.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const data = entry.data;
+const formattedDate = data.publishDate.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+});
+---
+
+<BaseLayout title={data.title} description={data.description} image={data.heroImage}>
+  <section class="article-hero">
+    <div class="container">
+      <div class="panel article-head">
+        <p class="eyebrow">Review</p>
+        <h1>{data.title}</h1>
+        <p>{data.description}</p>
+        <div class="badge-row">
+          <span class="badge">{data.categoryLabel}</span>
+          <span class="badge">Published {formattedDate}</span>
+          {data.rating && <span class="badge">Rating {data.rating}/10</span>}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container article-layout">
+      <article class="article-shell prose">
+        {data.heroImage && <img src={data.heroImage} alt={data.title} class="card-image" />}
+        <Content />
+      </article>
+      <aside>
+        <div class="info-box">
+          <h3>Quick summary</h3>
+          <p>{data.description}</p>
+        </div>
+        {data.pros.length > 0 && (
+          <div class="info-box">
+            <h3>Pros</h3>
+            <ul class="simple-list">
+              {data.pros.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        )}
+        {data.cons.length > 0 && (
+          <div class="info-box">
+            <h3>Cons</h3>
+            <ul class="simple-list">
+              {data.cons.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        )}
+        {data.recommendedFor.length > 0 && (
+          <div class="info-box">
+            <h3>Recommended for</h3>
+            <ul class="simple-list">
+              {data.recommendedFor.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

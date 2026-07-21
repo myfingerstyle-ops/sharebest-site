@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#ecfeff"/>
+  <rect x="90" y="90" width="1020" height="495" rx="28" fill="#ffffff" stroke="#a5f3fc"/>
+  <text x="120" y="215" font-size="58" font-family="Arial, sans-serif" font-weight="700" fill="#10243e">Pet Water Fountain</text>
+  <text x="120" y="290" font-size="28" font-family="Arial, sans-serif" fill="#50627a">Hydration-focused review for cats and dogs</text>
+  <rect x="120" y="355" width="360" height="62" rx="18" fill="#2563eb"/>
+  <text x="150" y="395" font-size="26" font-family="Arial, sans-serif" fill="#ffffff">ShareBest</text>
+  <circle cx="930" cy="300" r="82" fill="#67e8f9"/>
+  <path d="M930 230 C990 305 980 370 930 405 C880 370 870 305 930 230Z" fill="#06b6d4"/>
+</svg>

@@ -1,0 +1,26 @@
+﻿---
+import { navigation } from "../data/navigation";
+import { site } from "../data/site";
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="/">
+      <span class="brand-mark">PP</span>
+      <span>
+        <strong>{site.shortName}</strong>
+        <small>{site.tagline}</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <ul class="nav-list">
+        {navigation.map((item) => (
+          <li>
+            <a href={item.href} class={currentPath === item.href ? "active" : undefined}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

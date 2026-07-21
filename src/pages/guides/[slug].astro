@@ -1,0 +1,63 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const guides = await getCollection("guides");
+  return guides.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const data = entry.data;
+const formattedDate = data.publishDate.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+});
+---
+
+<BaseLayout title={data.title} description={data.description} image={data.heroImage}>
+  <section class="article-hero">
+    <div class="container">
+      <div class="panel article-head">
+        <p class="eyebrow">Guide</p>
+        <h1>{data.title}</h1>
+        <p>{data.description}</p>
+        <div class="badge-row">
+          <span class="badge">{data.categoryLabel}</span>
+          <span class="badge">Published {formattedDate}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container article-layout">
+      <article class="article-shell prose">
+        {data.heroImage && <img src={data.heroImage} alt={data.title} class="card-image" />}
+        <Content />
+      </article>
+      <aside>
+        {data.keyTakeaways.length > 0 && (
+          <div class="info-box">
+            <h3>Key takeaways</h3>
+            <ul class="simple-list">
+              {data.keyTakeaways.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        )}
+        <div class="info-box">
+          <h3>Need more help?</h3>
+          <p>
+            Browse more reviews and category pages to compare related products.
+          </p>
+          <p><a href="/reviews/">See reviews</a></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

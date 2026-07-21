@@ -1,0 +1,36 @@
+﻿---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  categoryLabel: string;
+  publishDate: Date;
+  image?: string;
+}
+
+const { href, title, description, categoryLabel, publishDate, image } = Astro.props;
+const formattedDate = publishDate.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "short",
+  day: "numeric"
+});
+---
+
+<article class="card article-card">
+  <a class="card-image-link" href={href} aria-label={title}>
+    {image ? (
+      <img src={image} alt={title} class="card-image" loading="lazy" />
+    ) : (
+      <div class="card-image placeholder">Featured article</div>
+    )}
+  </a>
+  <div class="card-body">
+    <p class="eyebrow">{categoryLabel}</p>
+    <h3><a href={href}>{title}</a></h3>
+    <p>{description}</p>
+    <div class="meta-row">
+      <span>{formattedDate}</span>
+      <a href={href}>Read more</a>
+    </div>
+  </div>
+</article>

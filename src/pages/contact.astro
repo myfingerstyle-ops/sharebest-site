@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout title="Contact" description="Get in touch with ShareBest.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="panel page-intro">
+        <p class="eyebrow">Contact</p>
+        <h1>Have a question or feedback?</h1>
+        <p>
+          This MVP version is a simple display website, so the fastest way to reach us is by email.
+        </p>
+        <div class="badge-row">
+          <span class="badge">Email: {site.email}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2">
+      <article class="card card-body page-copy">
+        <h2>Best reasons to contact us</h2>
+        <ul>
+          <li>Questions about a published review or guide</li>
+          <li>Corrections or update suggestions</li>
+          <li>Partnership, media, or general business inquiries</li>
+        </ul>
+      </article>
+      <article class="card card-body page-copy">
+        <h2>Before you email</h2>
+        <ul>
+          <li>Please include the article title or page URL if your message is about a specific post</li>
+          <li>Allow a reasonable reply window for editorial questions</li>
+          <li>Do not send sensitive personal information through email</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

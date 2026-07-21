@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout title="About" description="Learn what ShareBest covers and how the site helps readers compare products faster.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="panel page-intro">
+        <p class="eyebrow">About us</p>
+        <h1>Simple product advice for everyday shoppers.</h1>
+        <p>
+          {site.name} is a lightweight editorial site focused on practical product reviews and easy-to-read buying guides.
+          The launch version starts with home and pet essentials, with room to expand into more everyday categories over time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2">
+      <article class="card card-body page-copy">
+        <h2>What we publish</h2>
+        <ul>
+          <li>Short reviews that explain what works well and what does not</li>
+          <li>Buying guides that compare product types, use cases, and trade-offs</li>
+          <li>Beginner-friendly recommendations written in clear, direct language</li>
+        </ul>
+      </article>
+      <article class="card card-body page-copy">
+        <h2>How to use the site</h2>
+        <ul>
+          <li>Start with a review if you already know the product type you need</li>
+          <li>Open a guide if you are still comparing options</li>
+          <li>Use category pages to quickly browse related topics</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

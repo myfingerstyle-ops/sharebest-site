@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout title="Disclaimer" description="Editorial and affiliate disclaimer for ShareBest.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="panel page-intro page-copy">
+        <p class="eyebrow">Legal</p>
+        <h1>Disclaimer</h1>
+        <p>
+          Content published on this site is for informational purposes only and should not replace professional medical, veterinary, technical, or safety advice where relevant.
+        </p>
+        <h2>Editorial intent</h2>
+        <p>
+          We aim to provide useful summaries, observations, and general buying guidance based on product positioning, common use cases, and practical reader needs.
+        </p>
+        <h2>Affiliate notice</h2>
+        <p>
+          This site may include affiliate links in the future. If that happens, qualifying purchases may generate a small commission at no extra cost to the reader.
+        </p>
+        <h2>Product fit</h2>
+        <p>
+          Every product works differently depending on the buyer, use case, budget, and environment. Always confirm fit, compatibility, and safety details before making a purchase.
+        </p>
+        <h2>Contact</h2>
+        <p>
+          For corrections or policy questions, email <a href={`mailto:${site.email}`}>{site.email}</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

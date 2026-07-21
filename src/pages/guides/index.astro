@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import ArticleCard from "../../components/ArticleCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const guides = (await getCollection("guides")).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout title="Guides" description="Browse simple buying guides on ShareBest.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="panel page-intro">
+        <p class="eyebrow">Guides</p>
+        <h1>Buying guides for simpler, smarter comparisons.</h1>
+        <p>
+          Read easy category explainers focused on features, use cases, and trade-offs across our current launch topics.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        {guides.map((entry) => (
+          <ArticleCard
+            href={`/guides/${entry.slug}/`}
+            title={entry.data.title}
+            description={entry.data.description}
+            categoryLabel={entry.data.categoryLabel}
+            publishDate={entry.data.publishDate}
+            image={entry.data.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

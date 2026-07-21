@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="ShareBest social image">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <rect x="70" y="70" width="1060" height="490" rx="28" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="110" y="220" font-size="72" font-family="Arial, sans-serif" font-weight="700" fill="#10243e">ShareBest</text>
+  <text x="110" y="300" font-size="34" font-family="Arial, sans-serif" fill="#50627a">Honest pet product reviews and simple buying guides.</text>
+  <text x="110" y="395" font-size="28" font-family="Arial, sans-serif" fill="#2563eb">Reviews • Guides • Category pages</text>
+  <circle cx="950" cy="235" r="42" fill="#2563eb"/>
+  <circle cx="1035" cy="235" r="42" fill="#2563eb"/>
+  <circle cx="900" cy="350" r="34" fill="#2563eb"/>
+  <circle cx="992" cy="396" r="50" fill="#2563eb"/>
+  <circle cx="1084" cy="350" r="34" fill="#2563eb"/>
+</svg>
