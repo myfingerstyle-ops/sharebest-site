@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Best Cordless Handheld Vacuums for Quick Cleaning"
 description: "A practical roundup of cordless handheld vacuums for crumbs, pet hair, car seats, and fast everyday cleanups."
 publishDate: 2026-07-21
@@ -24,6 +24,33 @@ recommendedFor:
   - "People who want a fast cleanup tool for daily messes"
   - "Pet owners who clean couches and car seats often"
   - "Apartment shoppers who want a compact vacuum helper"
+galleryImages:
+  - src: "/images/reviews/gallery/cordless-handheld-vacuums-for-quick-cleaning-1.svg"
+    alt: "Cordless Handheld Vacuums for Quick Cleaning gallery image 1"
+    caption: "A fast cleanup tool for crumbs, fabric dust, and car messes."
+  - src: "/images/reviews/gallery/cordless-handheld-vacuums-for-quick-cleaning-2.svg"
+    alt: "Cordless Handheld Vacuums for Quick Cleaning gallery image 2"
+    caption: "A grab-and-go vacuum that works best for short daily cleaning jobs."
+  - src: "/images/reviews/gallery/cordless-handheld-vacuums-for-quick-cleaning-3.svg"
+    alt: "Cordless Handheld Vacuums for Quick Cleaning gallery image 3"
+    caption: "A quick-maintenance appliance for apartments and busy households."
+quickFacts:
+  - label: "Best for"
+    value: "Quick spills and daily touch-ups"
+  - label: "Maintenance"
+    value: "Empty dust bin and clean filter often"
+  - label: "Style fit"
+    value: "Cars, sofas, stairs, and small apartments"
+scoreBreakdown:
+  - label: "Portability"
+    score: 9.4
+    note: "A lightweight model is easier to use often."
+  - label: "Pickup power"
+    score: 8.8
+    note: "Enough suction matters more than extra attachments."
+  - label: "Charging convenience"
+    score: 8.3
+    note: "Docking and battery habits affect everyday use."
 ---
 
 ## Quick verdict

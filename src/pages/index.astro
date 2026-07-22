@@ -14,19 +14,17 @@ const guidePool = guides.filter((entry) => entry.data.featured);
 
 const featuredReviews = (reviewPool.length > 0 ? reviewPool : reviews).slice(0, 3);
 const featuredGuides = (guidePool.length > 0 ? guidePool : guides).slice(0, 3);
+const heroReview = featuredReviews[0];
+const heroGuide = featuredGuides[0];
 
 const latestArticles = [
-  ...reviews.map((entry) => ({
-    entry,
-    href: "/reviews/" + entry.slug + "/"
-  })),
-  ...guides.map((entry) => ({
-    entry,
-    href: "/guides/" + entry.slug + "/"
-  }))
+  ...reviews.map((entry) => ({ entry, href: "/reviews/" + entry.slug + "/" })),
+  ...guides.map((entry) => ({ entry, href: "/guides/" + entry.slug + "/" }))
 ]
   .sort((a, b) => b.entry.data.publishDate.valueOf() - a.entry.data.publishDate.valueOf())
   .slice(0, 6);
+
+const spotlightArticles = reviews.slice(0, 3);
 
 const categoryMap = new Map();
 [...reviews, ...guides].forEach((entry) => {
@@ -43,72 +41,87 @@ const categoryMap = new Map();
 });
 
 const categories = [...categoryMap.values()].sort((a, b) => b.count - a.count).slice(0, 6);
+const totalArticles = reviews.length + guides.length;
 
 const trustPoints = [
   {
     title: "Clear summaries first",
-    body: "Every article starts with the key verdict so readers can decide faster without digging through long intros."
+    body: "Every article starts with the verdict, the tradeoffs, and who the pick fits best."
   },
   {
-    title: "Practical buyer language",
-    body: "The site focuses on plain-English explanations, common use cases, and simple tradeoffs instead of jargon-heavy copy."
+    title: "Everyday product focus",
+    body: "Coverage is built around home, pets, cleaning, storage, and practical daily upgrades."
   },
   {
-    title: "Coverage built for real homes",
-    body: "Launch content is centered on pet essentials, home cleaning, small-space living, and useful daily upgrades."
+    title: "Fast browsing experience",
+    body: "Simple layouts, visual cards, and direct category links help readers compare faster."
   }
 ];
-
-const shoppingSteps = [
-  {
-    title: "Pick a category",
-    body: "Start with pets, home, office, or storage."
-  },
-  {
-    title: "Compare fast",
-    body: "Scan short reviews, pros, and tradeoffs."
-  },
-  {
-    title: "Buy with confidence",
-    body: "Use guides to narrow the best fit for your needs."
-  }
-];
-
-const heroReview = featuredReviews[0];
-const heroGuide = featuredGuides[0];
-const totalArticles = reviews.length + guides.length;
 ---
 
 <BaseLayout title={site.name} description={site.description}>
-  <section class="hero hero-upgraded">
-    <div class="container hero-grid hero-grid-upgraded">
+  <section class="hero hero-upgraded hero-rich-home">
+    <div class="hero-ambient" aria-hidden="true">
+      <span class="hero-ambient-orb hero-ambient-orb-one"></span>
+      <span class="hero-ambient-orb hero-ambient-orb-two"></span>
+      <span class="hero-ambient-grid"></span>
+    </div>
+
+    <div class="container hero-grid hero-grid-upgraded hero-grid-rich">
       <div class="hero-card hero-copy hero-copy-upgraded">
+        <div class="hero-kicker-row">
+          <span class="hero-kicker-pill">English edition</span>
+          <span class="hero-kicker-copy">Practical buying research for home, pets, and daily life</span>
+        </div>
         <p class="eyebrow">Curated product reviews</p>
-        <h1>Practical reviews for home, pets, and everyday upgrades.</h1>
+        <h1>Useful product picks with a cleaner, more premium reading experience.</h1>
         <p>
-          ShareBest helps you compare useful products faster with concise reviews, simple buying guides, and easy category browsing built for everyday shoppers.
+          ShareBest helps readers compare practical products faster through concise summaries, image-rich layouts, and simple category browsing that feels polished without becoming cluttered.
         </p>
         <div class="hero-actions">
           <a class="button" href={site.heroCtaPrimary}>Browse reviews</a>
           <a class="button-secondary" href={site.heroCtaSecondary}>Read buying guides</a>
         </div>
         <div class="hero-trust-row">
-          <span>Clear pros and cons</span>
-          <span>Easy category browsing</span>
-          <span>English-only editorial site</span>
+          <span>Editorial layouts</span>
+          <span>Visual product guides</span>
+          <span>Simple pros and cons</span>
+        </div>
+        <div class="hero-proof-grid">
+          <div class="hero-proof-card">
+            <strong>{totalArticles}+</strong>
+            <span>published reads</span>
+          </div>
+          <div class="hero-proof-card">
+            <strong>{categories.length}</strong>
+            <span>core categories</span>
+          </div>
+          <div class="hero-proof-card">
+            <strong>{reviews.length}</strong>
+            <span>review articles</span>
+          </div>
         </div>
       </div>
 
-      <div class="hero-card hero-visual">
-        <div class="hero-visual-top">
-          <div>
-            <p class="eyebrow">Fresh on ShareBest</p>
-            <h2>Start with practical picks, not guesswork.</h2>
+      <div class="hero-card hero-visual hero-visual-rich">
+        <div class="hero-floating-notes" aria-hidden="true">
+          <div class="hero-floating-note">
+            <span>Focus</span>
+            <strong>Home + Pets</strong>
           </div>
-          <span class="hero-pill">Launch collection</span>
+          <div class="hero-floating-note">
+            <span>Format</span>
+            <strong>Visual summaries</strong>
+          </div>
         </div>
 
-        <div class="hero-feature-stack">
+        <img
+          src="/images/site/hero/sharebest-home-hero.svg"
+          alt="Editorial-style collage for ShareBest homepage"
+          class="hero-visual-image"
+        />
+
+        <div class="hero-overlay-grid">
           {heroReview ? (
             <a class="hero-feature-card primary" href={"/reviews/" + heroReview.slug + "/"}>
               <span class="hero-feature-label">Featured review</span>
@@ -119,36 +132,15 @@ const totalArticles = reviews.length + guides.length;
                 {heroReview.data.rating && <strong>{heroReview.data.rating}/10</strong>}
               </div>
             </a>
-          ) : (
-            <div class="hero-feature-card primary">
-              <span class="hero-feature-label">Featured review</span>
-              <h3>More reviews are coming soon</h3>
-              <p>ShareBest is expanding its launch collection with more practical comparison articles.</p>
-            </div>
-          )}
+          ) : null}
 
           {heroGuide ? (
             <a class="hero-feature-card secondary" href={"/guides/" + heroGuide.slug + "/"}>
-              <span class="hero-feature-label">Helpful guide</span>
+              <span class="hero-feature-label">Reader guide</span>
               <h3>{heroGuide.data.title}</h3>
               <p>{heroGuide.data.description}</p>
             </a>
-          ) : (
-            <div class="hero-feature-card secondary">
-              <span class="hero-feature-label">Helpful guide</span>
-              <h3>Buying guides for first-time shoppers</h3>
-              <p>Guides will help readers compare safety, value, and best-fit use cases more easily.</p>
-            </div>
-          )}
-        </div>
-
-        <div class="hero-mini-grid">
-          {shoppingSteps.map((item) => (
-            <div class="hero-mini-card">
-              <strong>{item.title}</strong>
-              <p>{item.body}</p>
-            </div>
-          ))}
+          ) : null}
         </div>
       </div>
     </div>
@@ -181,6 +173,45 @@ const totalArticles = reviews.length + guides.length;
     <div class="container">
       <div class="section-heading">
         <div>
+          <p class="eyebrow">Editorial spotlight</p>
+          <h2>A richer first screen for practical shopping research</h2>
+        </div>
+      </div>
+
+      <div class="spotlight-grid">
+        {spotlightArticles[0] && (
+          <a class="spotlight-card spotlight-card-large" href={"/reviews/" + spotlightArticles[0].slug + "/"}>
+            {spotlightArticles[0].data.heroImage && (
+              <img src={spotlightArticles[0].data.heroImage} alt={spotlightArticles[0].data.title} class="spotlight-image" />
+            )}
+            <div class="spotlight-body">
+              <span class="hero-feature-label">Editor pick</span>
+              <h3>{spotlightArticles[0].data.title}</h3>
+              <p>{spotlightArticles[0].data.description}</p>
+            </div>
+          </a>
+        )}
+
+        <div class="spotlight-stack">
+          {spotlightArticles.slice(1).map((entry) => (
+            <a class="spotlight-card" href={"/reviews/" + entry.slug + "/"}>
+              {entry.data.heroImage && <img src={entry.data.heroImage} alt={entry.data.title} class="spotlight-image" />}
+              <div class="spotlight-body">
+                <span class="hero-feature-label">Popular review</span>
+                <h3>{entry.data.title}</h3>
+                <p>{entry.data.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-heading">
+        <div>
           <p class="eyebrow">Featured reviews</p>
           <h2>Start with our most useful product picks</h2>
         </div>
@@ -201,7 +232,7 @@ const totalArticles = reviews.length + guides.length;
     </div>
   </section>
 
-  <section class="section section-soft">
+  <section class="section">
     <div class="container">
       <div class="section-heading">
         <div>
@@ -231,7 +262,7 @@ const totalArticles = reviews.length + guides.length;
         <div>
           <p class="eyebrow">Shop by category</p>
           <h2>Browse the site by topic</h2>
-          <p class="section-subcopy">These categories make it easier to jump straight into the product type you care about most.</p>
+          <p class="section-subcopy">Jump straight into the product type you care about most.</p>
         </div>
       </div>
       <div class="category-grid">
@@ -252,7 +283,6 @@ const totalArticles = reviews.length + guides.length;
         <div>
           <p class="eyebrow">Why trust ShareBest</p>
           <h2>Built for fast, low-stress product research</h2>
-          <p class="section-subcopy">The site is designed for readers who want useful summaries, real tradeoffs, and less clutter.</p>
         </div>
       </div>
       <div class="trust-grid">
@@ -294,9 +324,9 @@ const totalArticles = reviews.length + guides.length;
       <div class="cta-panel">
         <div>
           <p class="eyebrow">Next up</p>
-          <h2>More full product reviews are on the way.</h2>
+          <h2>More image-rich reviews are on the way.</h2>
           <p>
-            ShareBest is expanding with deeper comparison articles, richer homepage visuals, and stronger internal linking between reviews and guides.
+            ShareBest is expanding with richer article galleries, better internal linking, and stronger visual storytelling across reviews and guides.
           </p>
         </div>
         <div class="hero-actions">

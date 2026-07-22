@@ -21,50 +21,109 @@ const formattedDate = data.publishDate.toLocaleDateString("en-US", {
 ---
 
 <BaseLayout title={data.title} description={data.description} image={data.heroImage}>
-  <section class="article-hero">
-    <div class="container">
-      <div class="panel article-head">
+  <section class="article-hero article-hero-rich-shell">
+    <div class="container article-hero-grid">
+      <div class="panel article-head article-head-rich">
         <p class="eyebrow">Review</p>
         <h1>{data.title}</h1>
-        <p>{data.description}</p>
+        <p class="article-lead">{data.description}</p>
         <div class="badge-row">
           <span class="badge">{data.categoryLabel}</span>
           <span class="badge">Published {formattedDate}</span>
           {data.rating && <span class="badge">Rating {data.rating}/10</span>}
         </div>
+
+        {data.quickFacts.length > 0 && (
+          <div class="fact-grid">
+            {data.quickFacts.map((item) => (
+              <div class="fact-card">
+                <span>{item.label}</span>
+                <strong>{item.value}</strong>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div class="panel article-visual-panel">
+        {data.heroImage ? (
+          <img src={data.heroImage} alt={data.title} class="article-hero-image" />
+        ) : (
+          <div class="article-hero-placeholder">Main visual coming soon</div>
+        )}
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container article-layout">
-      <article class="article-shell prose">
-        {data.heroImage && <img src={data.heroImage} alt={data.title} class="card-image" />}
+  <section class="section section-tight-top">
+    <div class="container article-layout article-layout-rich">
+      <article class="article-shell prose article-shell-rich">
+        {data.galleryImages.length > 0 && (
+          <section class="article-gallery-block">
+            <div class="article-inline-heading">
+              <p class="eyebrow">Visual overview</p>
+              <h2>What this product category looks like in real use</h2>
+            </div>
+            <div class="gallery-grid">
+              {data.galleryImages.map((image) => (
+                <figure class="gallery-card">
+                  <img src={image.src} alt={image.alt} class="gallery-image" loading="lazy" />
+                  {image.caption && <figcaption>{image.caption}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          </section>
+        )}
+
         <Content />
       </article>
-      <aside>
-        <div class="info-box">
+
+      <aside class="article-sidebar-rich">
+        <div class="info-box info-box-static">
           <h3>Quick summary</h3>
           <p>{data.description}</p>
         </div>
+
+        {data.scoreBreakdown.length > 0 && (
+          <div class="info-box info-box-static">
+            <h3>Score breakdown</h3>
+            <div class="score-list">
+              {data.scoreBreakdown.map((item) => (
+                <div class="score-item">
+                  <div class="score-head">
+                    <strong>{item.label}</strong>
+                    <span>{item.score}/10</span>
+                  </div>
+                  <div class="score-meter" style={`--score:${item.score};`} aria-hidden="true">
+                    <span></span>
+                  </div>
+                  <p>{item.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {data.pros.length > 0 && (
-          <div class="info-box">
+          <div class="info-box info-box-static">
             <h3>Pros</h3>
             <ul class="simple-list">
               {data.pros.map((item) => <li>{item}</li>)}
             </ul>
           </div>
         )}
+
         {data.cons.length > 0 && (
-          <div class="info-box">
+          <div class="info-box info-box-static">
             <h3>Cons</h3>
             <ul class="simple-list">
               {data.cons.map((item) => <li>{item}</li>)}
             </ul>
           </div>
         )}
+
         {data.recommendedFor.length > 0 && (
-          <div class="info-box">
+          <div class="info-box info-box-static">
             <h3>Recommended for</h3>
             <ul class="simple-list">
               {data.recommendedFor.map((item) => <li>{item}</li>)}

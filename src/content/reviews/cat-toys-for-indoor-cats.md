@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Best Cat Toys for Indoor Cats"
 description: "A practical roundup of indoor cat toys that help with boredom, solo play, and daily enrichment."
 publishDate: 2026-07-19
@@ -24,6 +24,33 @@ recommendedFor:
   - "Indoor cats that need more daily activity"
   - "Owners who want a mix of solo and interactive play"
   - "Apartment households that want low-mess enrichment"
+galleryImages:
+  - src: "/images/reviews/gallery/cat-toys-for-indoor-cats-1.svg"
+    alt: "Cat Toys for Indoor Cats gallery image 1"
+    caption: "A more playful indoor setup for cats that need better enrichment."
+  - src: "/images/reviews/gallery/cat-toys-for-indoor-cats-2.svg"
+    alt: "Cat Toys for Indoor Cats gallery image 2"
+    caption: "Simple toys that help turn quiet corners into active play zones."
+  - src: "/images/reviews/gallery/cat-toys-for-indoor-cats-3.svg"
+    alt: "Cat Toys for Indoor Cats gallery image 3"
+    caption: "A mix of movement, texture, and routine for everyday indoor play."
+quickFacts:
+  - label: "Best for"
+    value: "Indoor cats that need more stimulation"
+  - label: "Maintenance"
+    value: "Easy toy rotation and light cleaning"
+  - label: "Style fit"
+    value: "Living rooms, cat corners, and window areas"
+scoreBreakdown:
+  - label: "Engagement"
+    score: 9.2
+    note: "Movement and texture help keep indoor cats interested."
+  - label: "Variety"
+    score: 8.7
+    note: "A good toy mix keeps play from feeling repetitive."
+  - label: "Storage ease"
+    score: 8.4
+    note: "Lightweight toys are easy to rotate and put away."
 ---
 
 ## Quick verdict

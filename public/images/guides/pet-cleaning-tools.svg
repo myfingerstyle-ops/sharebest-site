@@ -5,7 +5,7 @@
   <text x="120" y="290" font-size="28" font-family="Arial, sans-serif" fill="#50627a">Quick picks for hair, floors, and daily messes</text>
   <rect x="120" y="355" width="360" height="62" rx="18" fill="#ea580c"/>
   <text x="150" y="395" font-size="26" font-family="Arial, sans-serif" fill="#ffffff">ShareBest</text>
-  <rect x="860" y="230" width="140" height="190" rx="24" fill="#fdba74"/>
+  <rect x="860" y="230" width="140" height="190" rx="24" fill="#d6b08b"/>
   <rect x="905" y="180" width="50" height="70" rx="14" fill="#fb923c"/>
   <rect x="1025" y="255" width="34" height="200" rx="16" fill="#94a3b8"/>
 </svg>

@@ -15,7 +15,33 @@ const reviewCollection = defineCollection({
     rating: z.number().min(1).max(10).optional(),
     pros: z.array(z.string()).default([]),
     cons: z.array(z.string()).default([]),
-    recommendedFor: z.array(z.string()).default([])
+    recommendedFor: z.array(z.string()).default([]),
+    galleryImages: z
+      .array(
+        z.object({
+          src: z.string(),
+          alt: z.string(),
+          caption: z.string().optional()
+        })
+      )
+      .default([]),
+    quickFacts: z
+      .array(
+        z.object({
+          label: z.string(),
+          value: z.string()
+        })
+      )
+      .default([]),
+    scoreBreakdown: z
+      .array(
+        z.object({
+          label: z.string(),
+          score: z.number().min(1).max(10),
+          note: z.string()
+        })
+      )
+      .default([])
   })
 });
 

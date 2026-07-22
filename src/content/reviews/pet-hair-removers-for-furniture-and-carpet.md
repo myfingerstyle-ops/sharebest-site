@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Best Pet Hair Removers for Furniture and Carpet"
 description: "A practical roundup of pet hair removers for sofas, blankets, rugs, and carpeted rooms."
 publishDate: 2026-07-20
@@ -24,6 +24,33 @@ recommendedFor:
   - "Homes with cats or dogs that shed often"
   - "People who need a fast tool for sofas and blankets"
   - "Shoppers who want a low-cost fur cleanup helper"
+galleryImages:
+  - src: "/images/reviews/gallery/pet-hair-removers-for-furniture-and-carpet-1.svg"
+    alt: "Pet Hair Removers for Furniture and Carpet gallery image 1"
+    caption: "A better routine for stubborn pet hair on soft furniture."
+  - src: "/images/reviews/gallery/pet-hair-removers-for-furniture-and-carpet-2.svg"
+    alt: "Pet Hair Removers for Furniture and Carpet gallery image 2"
+    caption: "A simple remover that makes rugs and seats look fresher faster."
+  - src: "/images/reviews/gallery/pet-hair-removers-for-furniture-and-carpet-3.svg"
+    alt: "Pet Hair Removers for Furniture and Carpet gallery image 3"
+    caption: "An easy everyday tool for homes with ongoing shedding."
+quickFacts:
+  - label: "Best for"
+    value: "Sofas, rugs, and high-shed homes"
+  - label: "Maintenance"
+    value: "Very low, mostly rinse or empty"
+  - label: "Style fit"
+    value: "Laundry corners and easy-reach cleaning caddies"
+scoreBreakdown:
+  - label: "Hair pickup"
+    score: 9.3
+    note: "The best tools lift embedded fur more reliably."
+  - label: "Ease of use"
+    score: 8.9
+    note: "Simple strokes beat fussy cleaning tools."
+  - label: "Value"
+    score: 8.7
+    note: "A low-cost remover can save time between deep cleans."
 ---
 
 ## Quick verdict

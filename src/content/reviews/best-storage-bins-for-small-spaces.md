@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Best Storage Bins for Small Spaces"
 description: "A practical roundup of storage bins that help organize closets, shelves, and under-bed space without adding clutter."
 publishDate: 2026-07-22
@@ -24,6 +24,33 @@ recommendedFor:
   - "Apartment renters with limited storage"
   - "Families trying to reduce everyday visual clutter"
   - "Anyone organizing closets, shelves, or under-bed areas"
+galleryImages:
+  - src: "/images/reviews/gallery/best-storage-bins-for-small-spaces-1.svg"
+    alt: "Best Storage Bins for Small Spaces gallery image 1"
+    caption: "A tidier storage zone that makes small rooms feel less crowded."
+  - src: "/images/reviews/gallery/best-storage-bins-for-small-spaces-2.svg"
+    alt: "Best Storage Bins for Small Spaces gallery image 2"
+    caption: "Bins that organize everyday clutter without looking too utilitarian."
+  - src: "/images/reviews/gallery/best-storage-bins-for-small-spaces-3.svg"
+    alt: "Best Storage Bins for Small Spaces gallery image 3"
+    caption: "A cleaner shelf-and-closet system for compact homes."
+quickFacts:
+  - label: "Best for"
+    value: "Closets, entryways, and under-bed storage"
+  - label: "Maintenance"
+    value: "Occasional wipe-down"
+  - label: "Style fit"
+    value: "Small apartments and tidy utility areas"
+scoreBreakdown:
+  - label: "Space efficiency"
+    score: 9
+    note: "Smart bin sizing helps every shelf work harder."
+  - label: "Ease of access"
+    score: 8.5
+    note: "Handles, lids, and stackability change daily usability."
+  - label: "Visual neatness"
+    score: 8.8
+    note: "Matching bins instantly make small spaces feel calmer."
 ---
 
 ## Quick verdict

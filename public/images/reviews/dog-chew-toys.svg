@@ -15,8 +15,8 @@
   <circle cx="1104" cy="380" r="44" fill="#FCD34D"/>
   <circle cx="1280" cy="380" r="44" fill="#FCD34D"/>
   <rect x="1150" y="474" width="86" height="140" rx="43" fill="#FB923C"/>
-  <circle cx="1193" cy="446" r="32" fill="#FDBA74"/>
-  <circle cx="1193" cy="642" r="32" fill="#FDBA74"/>
+  <circle cx="1193" cy="446" r="32" fill="#d6b08b"/>
+  <circle cx="1193" cy="642" r="32" fill="#d6b08b"/>
   <circle cx="1158" cy="522" r="10" fill="#7C2D12"/>
   <circle cx="1228" cy="522" r="10" fill="#7C2D12"/>
   <circle cx="1158" cy="566" r="10" fill="#7C2D12"/>

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Best Air Purifiers for Small Apartments"
 description: "A practical roundup of compact air purifiers for renters, bedrooms, and pet-friendly homes."
 publishDate: 2026-07-22
@@ -24,6 +24,33 @@ recommendedFor:
   - "Renters who want cleaner air in a small room"
   - "Pet owners dealing with dander or odor"
   - "Anyone who wants a quiet bedroom purifier"
+galleryImages:
+  - src: "/images/reviews/gallery/best-air-purifiers-for-small-apartments-1.svg"
+    alt: "Best Air Purifiers for Small Apartments gallery image 1"
+    caption: "A cleaner small-apartment setup without a bulky footprint."
+  - src: "/images/reviews/gallery/best-air-purifiers-for-small-apartments-2.svg"
+    alt: "Best Air Purifiers for Small Apartments gallery image 2"
+    caption: "A purifier that fits naturally into compact living rooms and bedrooms."
+  - src: "/images/reviews/gallery/best-air-purifiers-for-small-apartments-3.svg"
+    alt: "Best Air Purifiers for Small Apartments gallery image 3"
+    caption: "A calmer everyday environment for dust, odors, and pet dander control."
+quickFacts:
+  - label: "Best for"
+    value: "Studios and compact living rooms"
+  - label: "Maintenance"
+    value: "Filter swaps every few months"
+  - label: "Style fit"
+    value: "Minimal corners and small-footprint layouts"
+scoreBreakdown:
+  - label: "Airflow"
+    score: 9.2
+    note: "Strong day-to-day performance for tighter spaces."
+  - label: "Noise level"
+    score: 8.7
+    note: "Quiet enough for bedrooms and small home offices."
+  - label: "Value"
+    score: 8.9
+    note: "A practical upgrade when dust and odors are the main concern."
 ---
 
 ## Quick verdict

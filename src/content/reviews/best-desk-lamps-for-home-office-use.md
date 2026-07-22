@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Best Desk Lamps for Home Office Use"
 description: "A practical roundup of desk lamps that improve focus, reduce glare, and fit different home office setups."
 publishDate: 2026-07-21
@@ -24,6 +24,33 @@ recommendedFor:
   - "Remote workers building a more comfortable desk setup"
   - "Students or creators who work after sunset"
   - "Small apartments that need flexible lighting"
+galleryImages:
+  - src: "/images/reviews/gallery/best-desk-lamps-for-home-office-use-1.svg"
+    alt: "Best Desk Lamps for Home Office Use gallery image 1"
+    caption: "A clean task-light setup for longer work sessions."
+  - src: "/images/reviews/gallery/best-desk-lamps-for-home-office-use-2.svg"
+    alt: "Best Desk Lamps for Home Office Use gallery image 2"
+    caption: "A flexible lamp that can shift with your workflow."
+  - src: "/images/reviews/gallery/best-desk-lamps-for-home-office-use-3.svg"
+    alt: "Best Desk Lamps for Home Office Use gallery image 3"
+    caption: "A small-space lighting upgrade that still feels editorial."
+quickFacts:
+  - label: "Best for"
+    value: "Focus-heavy desk work"
+  - label: "Maintenance"
+    value: "Low, with occasional dusting"
+  - label: "Style fit"
+    value: "Small desks and work corners"
+scoreBreakdown:
+  - label: "Value"
+    score: 9.1
+    note: "A simple comfort upgrade that pays off quickly."
+  - label: "Flexibility"
+    score: 9.4
+    note: "Better adjustability helps with real desk workflows."
+  - label: "Glare control"
+    score: 8.8
+    note: "Good lamp positioning reduces harsh monitor reflections."
 ---
 
 ## Quick verdict

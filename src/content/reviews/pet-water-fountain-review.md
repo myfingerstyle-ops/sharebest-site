@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Best Pet Water Fountains for Cats and Small Dogs"
 description: "A practical roundup of pet water fountain features that can help encourage better daily hydration at home."
 publishDate: 2026-06-18
@@ -25,6 +25,33 @@ recommendedFor:
   - "Cat owners trying to improve daily hydration habits"
   - "Homes with one or two pets and consistent care routines"
   - "Pet parents willing to clean the fountain on schedule"
+galleryImages:
+  - src: "/images/reviews/gallery/pet-water-fountain-review-1.svg"
+    alt: "Pet Water Fountain Review gallery image 1"
+    caption: "A calmer hydration station for pets that prefer fresh water."
+  - src: "/images/reviews/gallery/pet-water-fountain-review-2.svg"
+    alt: "Pet Water Fountain Review gallery image 2"
+    caption: "A fountain that is easy to place in a quiet corner."
+  - src: "/images/reviews/gallery/pet-water-fountain-review-3.svg"
+    alt: "Pet Water Fountain Review gallery image 3"
+    caption: "A better daily routine for picky drinkers and tidy pet areas."
+quickFacts:
+  - label: "Best for"
+    value: "Cats and small dogs"
+  - label: "Maintenance"
+    value: "Regular wash plus filter changes"
+  - label: "Style fit"
+    value: "Quiet corners and hydration stations"
+scoreBreakdown:
+  - label: "Pet appeal"
+    score: 9.2
+    note: "Running water can encourage better daily hydration."
+  - label: "Cleaning ease"
+    score: 8.6
+    note: "Fewer parts usually means a simpler routine."
+  - label: "Noise level"
+    score: 8.8
+    note: "Low-noise fountains fit calmer homes better."
 ---
 
 ## Quick verdict
