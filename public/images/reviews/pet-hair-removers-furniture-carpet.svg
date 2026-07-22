@@ -1,0 +1,24 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fdf2f8"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g1)"/>
+  <rect x="88" y="88" width="1024" height="499" rx="30" fill="#ffffff" stroke="#f9a8d4"/>
+  <rect x="118" y="122" width="220" height="42" rx="21" fill="#fce7f3"/>
+  <text x="143" y="150" font-size="22" font-family="Arial, sans-serif" font-weight="700" fill="#9d174d">ShareBest Review</text>
+  <text x="120" y="228" font-size="58" font-family="Arial, sans-serif" font-weight="700" fill="#10243e">Pet Hair Removers</text>
+  <text x="120" y="300" font-size="58" font-family="Arial, sans-serif" font-weight="700" fill="#10243e">for Furniture</text>
+  <text x="120" y="368" font-size="28" font-family="Arial, sans-serif" fill="#50627a">Fast tools for sofas, rugs, blankets, and carpet</text>
+  <rect x="120" y="418" width="350" height="64" rx="18" fill="url(#g2)"/>
+  <text x="150" y="458" font-size="26" font-family="Arial, sans-serif" fill="#ffffff">Tackle everyday shedding</text>
+  <path d="M870 250 C945 190 1010 230 1002 312 C995 385 905 404 846 356 C800 318 792 283 870 250Z" fill="#f9a8d4"/>
+  <path d="M850 256 C914 232 964 254 978 302 C990 343 942 380 886 370 C833 360 801 305 850 256Z" fill="#7c3aed" opacity="0.8"/>
+  <rect x="828" y="390" width="196" height="26" rx="13" fill="#ec4899" opacity="0.8"/>
+</svg>

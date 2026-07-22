@@ -1,4 +1,4 @@
----
+﻿---
 import { getCollection } from "astro:content";
 import ArticleCard from "../components/ArticleCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -8,47 +8,159 @@ const sortByDate = (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.v
 
 const reviews = (await getCollection("reviews")).sort(sortByDate);
 const guides = (await getCollection("guides")).sort(sortByDate);
-const featuredReviews = reviews.filter((entry) => entry.data.featured).slice(0, 3);
-const latestGuides = guides.slice(0, 3);
+
+const reviewPool = reviews.filter((entry) => entry.data.featured);
+const guidePool = guides.filter((entry) => entry.data.featured);
+
+const featuredReviews = (reviewPool.length > 0 ? reviewPool : reviews).slice(0, 3);
+const featuredGuides = (guidePool.length > 0 ? guidePool : guides).slice(0, 3);
+
+const latestArticles = [
+  ...reviews.map((entry) => ({
+    entry,
+    href: "/reviews/" + entry.slug + "/"
+  })),
+  ...guides.map((entry) => ({
+    entry,
+    href: "/guides/" + entry.slug + "/"
+  }))
+]
+  .sort((a, b) => b.entry.data.publishDate.valueOf() - a.entry.data.publishDate.valueOf())
+  .slice(0, 6);
 
 const categoryMap = new Map();
 [...reviews, ...guides].forEach((entry) => {
-  if (categoryMap.has(entry.data.category) === false) {
-    categoryMap.set(entry.data.category, entry.data.categoryLabel);
+  const current = categoryMap.get(entry.data.category);
+  if (current) {
+    current.count += 1;
+  } else {
+    categoryMap.set(entry.data.category, {
+      slug: entry.data.category,
+      label: entry.data.categoryLabel,
+      count: 1
+    });
   }
 });
-const categories = [...categoryMap.entries()].map(([slug, label]) => ({ slug, label }));
+
+const categories = [...categoryMap.values()].sort((a, b) => b.count - a.count).slice(0, 6);
+
+const trustPoints = [
+  {
+    title: "Clear summaries first",
+    body: "Every article starts with the key verdict so readers can decide faster without digging through long intros."
+  },
+  {
+    title: "Practical buyer language",
+    body: "The site focuses on plain-English explanations, common use cases, and simple tradeoffs instead of jargon-heavy copy."
+  },
+  {
+    title: "Coverage built for real homes",
+    body: "Launch content is centered on pet essentials, home cleaning, small-space living, and useful daily upgrades."
+  }
+];
+
+const shoppingSteps = [
+  {
+    title: "Pick a category",
+    body: "Start with pets, home, office, or storage."
+  },
+  {
+    title: "Compare fast",
+    body: "Scan short reviews, pros, and tradeoffs."
+  },
+  {
+    title: "Buy with confidence",
+    body: "Use guides to narrow the best fit for your needs."
+  }
+];
+
+const heroReview = featuredReviews[0];
+const heroGuide = featuredGuides[0];
+const totalArticles = reviews.length + guides.length;
 ---
 
 <BaseLayout title={site.name} description={site.description}>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-card hero-copy">
-        <p class="eyebrow">Honest product picks</p>
-        <h1>Practical reviews for better everyday buys.</h1>
+  <section class="hero hero-upgraded">
+    <div class="container hero-grid hero-grid-upgraded">
+      <div class="hero-card hero-copy hero-copy-upgraded">
+        <p class="eyebrow">Curated product reviews</p>
+        <h1>Practical reviews for home, pets, and everyday upgrades.</h1>
         <p>
-          ShareBest publishes clear reviews, simple buying advice, and easy category guides for readers who want faster, less confusing product research.
+          ShareBest helps you compare useful products faster with concise reviews, simple buying guides, and easy category browsing built for everyday shoppers.
         </p>
         <div class="hero-actions">
           <a class="button" href={site.heroCtaPrimary}>Browse reviews</a>
-          <a class="button-secondary" href={site.heroCtaSecondary}>Read guides</a>
+          <a class="button-secondary" href={site.heroCtaSecondary}>Read buying guides</a>
+        </div>
+        <div class="hero-trust-row">
+          <span>Clear pros and cons</span>
+          <span>Easy category browsing</span>
+          <span>English-only editorial site</span>
         </div>
       </div>
-      <div class="hero-card hero-highlight">
-        <h2>What you will find here</h2>
-        <ul class="check-list">
-          <li>Short, practical reviews for everyday products</li>
-          <li>Simple buying guides written in plain English</li>
-          <li>Clear pros, cons, and best-fit use cases</li>
-          <li>Launch-phase coverage starting with pet and home essentials</li>
-        </ul>
+
+      <div class="hero-card hero-visual">
+        <div class="hero-visual-top">
+          <div>
+            <p class="eyebrow">Fresh on ShareBest</p>
+            <h2>Start with practical picks, not guesswork.</h2>
+          </div>
+          <span class="hero-pill">Launch collection</span>
+        </div>
+
+        <div class="hero-feature-stack">
+          {heroReview ? (
+            <a class="hero-feature-card primary" href={"/reviews/" + heroReview.slug + "/"}>
+              <span class="hero-feature-label">Featured review</span>
+              <h3>{heroReview.data.title}</h3>
+              <p>{heroReview.data.description}</p>
+              <div class="hero-feature-meta">
+                <span>{heroReview.data.categoryLabel}</span>
+                {heroReview.data.rating && <strong>{heroReview.data.rating}/10</strong>}
+              </div>
+            </a>
+          ) : (
+            <div class="hero-feature-card primary">
+              <span class="hero-feature-label">Featured review</span>
+              <h3>More reviews are coming soon</h3>
+              <p>ShareBest is expanding its launch collection with more practical comparison articles.</p>
+            </div>
+          )}
+
+          {heroGuide ? (
+            <a class="hero-feature-card secondary" href={"/guides/" + heroGuide.slug + "/"}>
+              <span class="hero-feature-label">Helpful guide</span>
+              <h3>{heroGuide.data.title}</h3>
+              <p>{heroGuide.data.description}</p>
+            </a>
+          ) : (
+            <div class="hero-feature-card secondary">
+              <span class="hero-feature-label">Helpful guide</span>
+              <h3>Buying guides for first-time shoppers</h3>
+              <p>Guides will help readers compare safety, value, and best-fit use cases more easily.</p>
+            </div>
+          )}
+        </div>
+
+        <div class="hero-mini-grid">
+          {shoppingSteps.map((item) => (
+            <div class="hero-mini-card">
+              <strong>{item.title}</strong>
+              <p>{item.body}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-tight-top">
     <div class="container">
       <div class="stats-grid">
+        <div class="card stat">
+          <strong>{totalArticles}</strong>
+          <span>Published articles</span>
+        </div>
         <div class="card stat">
           <strong>{reviews.length}</strong>
           <span>Review articles</span>
@@ -69,15 +181,15 @@ const categories = [...categoryMap.entries()].map(([slug, label]) => ({ slug, la
     <div class="container">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Featured</p>
-          <h2>Start with our highlighted reviews</h2>
+          <p class="eyebrow">Featured reviews</p>
+          <h2>Start with our most useful product picks</h2>
         </div>
         <a href="/reviews/">See all reviews</a>
       </div>
       <div class="grid grid-3">
         {featuredReviews.map((entry) => (
           <ArticleCard
-            href={`/reviews/${entry.slug}/`}
+            href={"/reviews/" + entry.slug + "/"}
             title={entry.data.title}
             description={entry.data.description}
             categoryLabel={entry.data.categoryLabel}
@@ -89,19 +201,19 @@ const categories = [...categoryMap.entries()].map(([slug, label]) => ({ slug, la
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-soft">
     <div class="container">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Guides</p>
+          <p class="eyebrow">Buying guides</p>
           <h2>Helpful reads for smarter comparisons</h2>
         </div>
         <a href="/guides/">See all guides</a>
       </div>
       <div class="grid grid-3">
-        {latestGuides.map((entry) => (
+        {featuredGuides.map((entry) => (
           <ArticleCard
-            href={`/guides/${entry.slug}/`}
+            href={"/guides/" + entry.slug + "/"}
             title={entry.data.title}
             description={entry.data.description}
             categoryLabel={entry.data.categoryLabel}
@@ -115,16 +227,82 @@ const categories = [...categoryMap.entries()].map(([slug, label]) => ({ slug, la
 
   <section class="section">
     <div class="container">
-      <div class="section-heading">
+      <div class="section-heading section-heading-stack">
         <div>
-          <p class="eyebrow">Explore</p>
-          <h2>Browse by category</h2>
+          <p class="eyebrow">Shop by category</p>
+          <h2>Browse the site by topic</h2>
+          <p class="section-subcopy">These categories make it easier to jump straight into the product type you care about most.</p>
         </div>
       </div>
-      <div class="category-links">
+      <div class="category-grid">
         {categories.map((category) => (
-          <a href={`/category/${category.slug}/`}>{category.label}</a>
+          <a class="category-card" href={"/category/" + category.slug + "/"}>
+            <span class="category-card-count">{category.count} article{category.count > 1 ? "s" : ""}</span>
+            <h3>{category.label}</h3>
+            <p>Explore reviews and guides related to {category.label.toLowerCase()}.</p>
+          </a>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-heading section-heading-stack">
+        <div>
+          <p class="eyebrow">Why trust ShareBest</p>
+          <h2>Built for fast, low-stress product research</h2>
+          <p class="section-subcopy">The site is designed for readers who want useful summaries, real tradeoffs, and less clutter.</p>
+        </div>
+      </div>
+      <div class="trust-grid">
+        {trustPoints.map((item) => (
+          <div class="card trust-card">
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Latest articles</p>
+          <h2>New and recently updated reads</h2>
+        </div>
+      </div>
+      <div class="grid grid-3">
+        {latestArticles.map(({ entry, href }) => (
+          <ArticleCard
+            href={href}
+            title={entry.data.title}
+            description={entry.data.description}
+            categoryLabel={entry.data.categoryLabel}
+            publishDate={entry.data.publishDate}
+            image={entry.data.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-panel">
+        <div>
+          <p class="eyebrow">Next up</p>
+          <h2>More full product reviews are on the way.</h2>
+          <p>
+            ShareBest is expanding with deeper comparison articles, richer homepage visuals, and stronger internal linking between reviews and guides.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="button" href="/reviews/">Explore reviews</a>
+          <a class="button-secondary button-secondary-light" href="/about/">Learn about ShareBest</a>
+        </div>
       </div>
     </div>
   </section>

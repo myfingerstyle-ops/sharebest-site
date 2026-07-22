@@ -1,10 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
-  <rect width="1200" height="675" fill="#ecfeff"/>
-  <rect x="90" y="90" width="1020" height="495" rx="28" fill="#ffffff" stroke="#a5f3fc"/>
-  <text x="120" y="215" font-size="58" font-family="Arial, sans-serif" font-weight="700" fill="#10243e">Pet Water Fountain</text>
-  <text x="120" y="290" font-size="28" font-family="Arial, sans-serif" fill="#50627a">Hydration-focused review for cats and dogs</text>
-  <rect x="120" y="355" width="360" height="62" rx="18" fill="#2563eb"/>
-  <text x="150" y="395" font-size="26" font-family="Arial, sans-serif" fill="#ffffff">ShareBest</text>
-  <circle cx="930" cy="300" r="82" fill="#67e8f9"/>
-  <path d="M930 230 C990 305 980 370 930 405 C880 370 870 305 930 230Z" fill="#06b6d4"/>
+﻿<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <rect x="86" y="84" width="1428" height="732" rx="36" fill="white" fill-opacity="0.94"/>
+  <rect x="138" y="142" width="210" height="42" rx="21" fill="#DBEAFE"/>
+  <text x="164" y="169" fill="#2563EB" font-family="Arial, sans-serif" font-size="24" font-weight="700">ShareBest Review</text>
+  <text x="138" y="284" fill="#111827" font-family="Arial, sans-serif" font-size="68" font-weight="800">Pet Water Fountain</text>
+  <text x="138" y="360" fill="#111827" font-family="Arial, sans-serif" font-size="68" font-weight="800">Review Guide</text>
+  <text x="138" y="430" fill="#4B5563" font-family="Arial, sans-serif" font-size="30">A simple guide to cleaner water, quieter pumps, and easier everyday maintenance.</text>
+  <rect x="138" y="512" width="340" height="112" rx="24" fill="#111827"/>
+  <text x="170" y="560" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="700">Hydration Essentials</text>
+  <text x="170" y="602" fill="#D1D5DB" font-family="Arial, sans-serif" font-size="22">Cleaning routine, filters, and bowl depth</text>
+  <rect x="1058" y="180" width="250" height="56" rx="28" fill="#BFDBFE"/>
+  <text x="1110" y="215" fill="#1D4ED8" font-family="Arial, sans-serif" font-size="28" font-weight="700">Pet Care</text>
+  <ellipse cx="1188" cy="560" rx="154" ry="112" fill="#93C5FD" fill-opacity="0.35"/>
+  <rect x="1060" y="332" width="256" height="228" rx="40" fill="#60A5FA"/>
+  <rect x="1098" y="366" width="180" height="140" rx="28" fill="#EFF6FF"/>
+  <path d="M1188 340C1188 340 1234 410 1234 450C1234 486 1214 510 1188 510C1162 510 1142 486 1142 450C1142 410 1188 340 1188 340Z" fill="#2563EB" fill-opacity="0.8"/>
+  <circle cx="1140" cy="640" r="42" fill="#DBEAFE"/>
+  <circle cx="1236" cy="640" r="42" fill="#DBEAFE"/>
+  <circle cx="1140" cy="640" r="18" fill="#60A5FA"/>
+  <circle cx="1236" cy="640" r="18" fill="#60A5FA"/>
+  <path d="M1168 718C1184 690 1212 690 1228 718" stroke="#2563EB" stroke-width="20" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="bg" x1="88" y1="72" x2="1506" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF6FF"/>
+      <stop offset="1" stop-color="#93C5FD"/>
+    </linearGradient>
+  </defs>
 </svg>

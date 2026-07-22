@@ -1,10 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
-  <rect width="1200" height="675" fill="#e0f2fe"/>
-  <rect x="90" y="90" width="1020" height="495" rx="28" fill="#ffffff" stroke="#bae6fd"/>
-  <text x="120" y="215" font-size="58" font-family="Arial, sans-serif" font-weight="700" fill="#10243e">Dog Chew Toys Review</text>
-  <text x="120" y="290" font-size="28" font-family="Arial, sans-serif" fill="#50627a">Durability, texture, and fit for strong chewers</text>
-  <rect x="120" y="355" width="360" height="62" rx="18" fill="#2563eb"/>
-  <text x="150" y="395" font-size="26" font-family="Arial, sans-serif" fill="#ffffff">ShareBest</text>
-  <circle cx="900" cy="280" r="88" fill="#38bdf8"/>
-  <rect x="840" y="360" width="180" height="52" rx="26" fill="#0f766e"/>
+﻿<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <rect x="86" y="84" width="1428" height="732" rx="36" fill="white" fill-opacity="0.94"/>
+  <rect x="138" y="142" width="210" height="42" rx="21" fill="#FEF3C7"/>
+  <text x="164" y="169" fill="#D97706" font-family="Arial, sans-serif" font-size="24" font-weight="700">ShareBest Review</text>
+  <text x="138" y="284" fill="#111827" font-family="Arial, sans-serif" font-size="68" font-weight="800">Best Dog Chew Toys</text>
+  <text x="138" y="360" fill="#111827" font-family="Arial, sans-serif" font-size="68" font-weight="800">for Aggressive Chewers</text>
+  <text x="138" y="430" fill="#4B5563" font-family="Arial, sans-serif" font-size="30">Safer, longer-lasting chew options for stronger jaws and busy dogs.</text>
+  <rect x="138" y="512" width="312" height="112" rx="24" fill="#111827"/>
+  <text x="170" y="560" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="700">Durability Guide</text>
+  <text x="170" y="602" fill="#D1D5DB" font-family="Arial, sans-serif" font-size="22">Sizing, texture, and supervised use</text>
+  <rect x="1060" y="192" width="224" height="56" rx="28" fill="#FDE68A"/>
+  <text x="1110" y="227" fill="#92400E" font-family="Arial, sans-serif" font-size="28" font-weight="700">Dog Toys</text>
+  <rect x="1082" y="350" width="220" height="60" rx="30" fill="#F59E0B"/>
+  <circle cx="1104" cy="380" r="44" fill="#FCD34D"/>
+  <circle cx="1280" cy="380" r="44" fill="#FCD34D"/>
+  <rect x="1150" y="474" width="86" height="140" rx="43" fill="#FB923C"/>
+  <circle cx="1193" cy="446" r="32" fill="#FDBA74"/>
+  <circle cx="1193" cy="642" r="32" fill="#FDBA74"/>
+  <circle cx="1158" cy="522" r="10" fill="#7C2D12"/>
+  <circle cx="1228" cy="522" r="10" fill="#7C2D12"/>
+  <circle cx="1158" cy="566" r="10" fill="#7C2D12"/>
+  <circle cx="1228" cy="566" r="10" fill="#7C2D12"/>
+  <defs>
+    <linearGradient id="bg" x1="70" y1="64" x2="1520" y2="854" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
 </svg>
