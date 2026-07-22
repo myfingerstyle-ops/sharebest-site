@@ -43,6 +43,27 @@ const categoryMap = new Map();
 const categories = [...categoryMap.values()].sort((a, b) => b.count - a.count).slice(0, 6);
 const totalArticles = reviews.length + guides.length;
 
+const editorialScenes = [
+  {
+    image: "/images/reviews/review-home-office-chair-cover.jpg",
+    alt: "Comfortable home office corner with a modern chair and warm natural light",
+    title: "Comfort-first home office upgrades",
+    body: "Lifestyle-led imagery makes practical recommendations feel closer to a real home instead of a catalog page."
+  },
+  {
+    image: "/images/reviews/review-kitchen-organizer-cover.jpg",
+    alt: "Organized kitchen shelves with containers and daily-use storage products",
+    title: "Storage scenes that feel lived in",
+    body: "Organizing products look more trustworthy when they appear inside believable everyday spaces with texture and warmth."
+  },
+  {
+    image: "/images/reviews/review-orthopedic-dog-bed-cover.jpg",
+    alt: "Relaxed dog resting on a supportive bed inside a calm living room",
+    title: "Pet products shown in real routines",
+    body: "Real pets, real rooms, and matching product context help the site feel more like editorial media and less like ecommerce."
+  }
+];
+
 const trustPoints = [
   {
     title: "Clear summaries first",
@@ -104,24 +125,15 @@ const trustPoints = [
       </div>
 
       <div class="hero-card hero-visual hero-visual-rich">
-        <div class="hero-floating-notes" aria-hidden="true">
-          <div class="hero-floating-note">
-            <span>Focus</span>
-            <strong>Home + Pets</strong>
-          </div>
-          <div class="hero-floating-note">
-            <span>Format</span>
-            <strong>Visual summaries</strong>
-          </div>
+        <div class="hero-image-frame">
+          <img
+            src="/images/site/hero/home-hero-editorial.jpg"
+            alt="Editorial-style home and pet product scene for ShareBest homepage"
+            class="hero-visual-image"
+          />
         </div>
 
-        <img
-          src="/images/site/hero/sharebest-home-hero.svg"
-          alt="Editorial-style collage for ShareBest homepage"
-          class="hero-visual-image"
-        />
-
-        <div class="hero-overlay-grid">
+        <div class="hero-support-grid">
           {heroReview ? (
             <a class="hero-feature-card primary" href={"/reviews/" + heroReview.slug + "/"}>
               <span class="hero-feature-label">Featured review</span>
@@ -204,6 +216,32 @@ const trustPoints = [
             </a>
           ))}
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading section-heading-stack">
+        <div>
+          <p class="eyebrow">Visual direction</p>
+          <h2>Real-life scenes that make the site feel more like a lifestyle publication</h2>
+          <p class="section-subcopy">
+            The next layer of polish comes from showing products inside believable home and pet routines with richer photographic storytelling.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-3">
+        {editorialScenes.map((scene) => (
+          <article class="spotlight-card">
+            <img src={scene.image} alt={scene.alt} class="spotlight-image" />
+            <div class="spotlight-body">
+              <span class="hero-feature-label">Editorial image direction</span>
+              <h3>{scene.title}</h3>
+              <p>{scene.body}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>

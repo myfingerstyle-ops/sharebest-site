@@ -10,7 +10,7 @@ tags:
   - "pet dander"
   - "HEPA filter"
 featured: true
-heroImage: "/images/reviews/air-purifiers-small-apartments.svg"
+heroImage: "/images/reviews/review-air-purifier-pet-owners-cover.jpg"
 rating: 9.1
 pros:
   - "Fits small rooms without taking over the space"

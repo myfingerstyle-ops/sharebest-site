@@ -10,7 +10,7 @@ tags:
   - "carpet cleaning"
   - "shedding"
 featured: true
-heroImage: "/images/reviews/pet-hair-removers-furniture-carpet.svg"
+heroImage: "/images/reviews/review-pet-hair-remover-cover.jpg"
 rating: 8.8
 pros:
   - "Helps remove visible fur from common fabric surfaces"

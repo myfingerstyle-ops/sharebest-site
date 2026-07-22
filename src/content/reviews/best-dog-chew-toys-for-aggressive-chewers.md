@@ -11,7 +11,7 @@ tags:
   - "durable chew toys"
   - "enrichment"
 featured: true
-heroImage: "/images/reviews/dog-chew-toys.svg"
+heroImage: "/images/reviews/review-orthopedic-dog-bed-cover.jpg"
 rating: 9.1
 pros:
   - "Helps redirect destructive chewing toward a more durable toy"

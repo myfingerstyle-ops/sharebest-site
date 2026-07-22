@@ -9,7 +9,7 @@ tags:
   - toy safety
   - cat guide
 featured: true
-heroImage: "/images/guides/safe-cat-toys.svg"
+heroImage: "/images/guides/guide-safe-cat-toys-cover.jpg"
 keyTakeaways:
   - "Match toy size and texture to your cat's play style"
   - "Avoid loose pieces that can detach too easily"

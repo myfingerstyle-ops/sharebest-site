@@ -10,7 +10,7 @@ tags:
   - "enrichment"
   - "solo play"
 featured: true
-heroImage: "/images/reviews/cat-toys-indoor-cats.svg"
+heroImage: "/images/reviews/review-cat-toys-indoor-cats-cover.jpg"
 rating: 9.0
 pros:
   - "Supports movement and mental stimulation indoors"

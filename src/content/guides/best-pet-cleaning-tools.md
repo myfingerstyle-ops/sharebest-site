@@ -9,7 +9,7 @@ tags:
   - home care
   - buying guide
 featured: false
-heroImage: "/images/guides/pet-cleaning-tools.svg"
+heroImage: "/images/guides/guide-pet-cleaning-tools-cover.jpg"
 keyTakeaways:
   - "Focus on the messes you deal with most often"
   - "Choose tools that are easy to grab and easy to store"

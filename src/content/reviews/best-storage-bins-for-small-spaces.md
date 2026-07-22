@@ -10,7 +10,7 @@ tags:
   - "organization"
   - "home storage"
 featured: true
-heroImage: "/images/reviews/storage-bins-small-spaces.svg"
+heroImage: "/images/reviews/review-small-home-storage-cover.jpg"
 rating: 9.0
 pros:
   - "Makes small apartments and shared rooms feel easier to manage"

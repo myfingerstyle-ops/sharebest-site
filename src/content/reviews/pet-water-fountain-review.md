@@ -11,7 +11,7 @@ tags:
   - "cat products"
   - "small dogs"
 featured: true
-heroImage: "/images/reviews/pet-water-fountain.svg"
+heroImage: "/images/reviews/review-pet-water-fountain-cover.jpg"
 rating: 8.9
 pros:
   - "Moving water encourages some pets to drink more often"

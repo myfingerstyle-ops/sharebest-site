@@ -10,7 +10,7 @@ tags:
   - "quick cleaning"
   - "pet hair"
 featured: true
-heroImage: "/images/reviews/cordless-handheld-vacuums-quick-cleaning.svg"
+heroImage: "/images/reviews/review-robot-vacuum-pet-hair-cover.jpg"
 rating: 8.9
 pros:
   - "Useful for quick pickups on furniture, stairs, and cars"
