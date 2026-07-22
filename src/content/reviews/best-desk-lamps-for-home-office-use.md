@@ -10,7 +10,7 @@ tags:
   - "lighting"
   - "workspace"
 featured: true
-heroImage: "/images/reviews/desk-lamps-home-office.svg"
+heroImage: "/images/reviews/review-desk-lamp-cover.jpg"
 rating: 9.1
 pros:
   - "Better task lighting can reduce eye strain during long work sessions"
